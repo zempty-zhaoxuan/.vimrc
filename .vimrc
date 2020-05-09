@@ -9,12 +9,21 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 "When .vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc 
 
+"below config for vim-insterestingwords
+let g:interestingWordsGUIColors = ['#8CCBEA', '#A4E57E', '#FFDB72', '#FF7272', '#FFB3FF', '#9999FF']
+let g:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']
+let g:interestingWordsRandomiseColors = 1
+
+"plug config
 call plug#begin('~/.vim/plugged')
 
- Plug 'yianwillis/vimcdoc'
  Plug 'scrooloose/nerdtree'
  Plug 'mhinz/vim-startify' 
+ Plug 'tpope/vim-fugitive' 
+ Plug 'lfv89/vim-interestingwords'
+
 call plug#end()
+
 
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
